@@ -1,13 +1,27 @@
 <template>
-    <div>e</div>
+  <div>
+    <p :style="{ color: theme.color }">e节点</p>
+    <button @click="handleClick">改变color为green</button>
+  </div>
 </template>
 <script>
 export default {
-    data() {
-        return {}
+  inject: {
+    theme: {
+      default: () => ({}),
     },
-    components: {},
-    created: function () {},
-    methods: {},
+  },
+  data() {
+    return {}
+  },
+  components: {},
+  created: function () {},
+  methods: {
+    handleClick() {
+      if (this.theme.changeColor) {
+        this.theme.changeColor('green')
+      }
+    },
+  },
 }
 </script>

@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <div class="second-page">
+        <p style="font-size: 16px;">D节点</p>
         <gpage></gpage>
         <hpage></hpage>
         <ipage></ipage>
@@ -18,3 +19,8 @@ export default {
     methods: {},
 }
 </script>
+<style lang="scss" scoped>
+.second-page{
+    border:1px solid pink;
+}
+</style>
